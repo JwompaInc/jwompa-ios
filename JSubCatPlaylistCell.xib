@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OPENSANS-REGULAR_1.TTF">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="142" id="npC-Tw-TNU" customClass="JSubCatPlaylistCell" customModule="JWOMPA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="npC-Tw-TNU" id="CeZ-KT-hUu">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="141.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WwF-On-P0W">
+                        <rect key="frame" x="20" y="22" width="109.5" height="97.5"/>
+                        <color key="backgroundColor" red="0.976406157" green="0.85303688050000004" blue="0.42734089489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="WwF-On-P0W" secondAttribute="height" multiplier="246:221" id="Kgm-Ip-Qae"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Playlist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLp-cp-HCl">
+                        <rect key="frame" x="149.5" y="22" width="205.5" height="22"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="999" text="Description" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BUO-Jn-w5u">
+                        <rect key="frame" x="150.5" y="44" width="204.5" height="17.5"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12.5"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="BUO-Jn-w5u" secondAttribute="trailing" constant="20" id="0IJ-GG-z95"/>
+                    <constraint firstItem="DLp-cp-HCl" firstAttribute="leading" secondItem="WwF-On-P0W" secondAttribute="trailing" constant="20" id="7qV-yH-IXS"/>
+                    <constraint firstItem="WwF-On-P0W" firstAttribute="leading" secondItem="CeZ-KT-hUu" secondAttribute="leading" constant="20" id="8Ip-yf-Ofl"/>
+                    <constraint firstItem="BUO-Jn-w5u" firstAttribute="top" secondItem="DLp-cp-HCl" secondAttribute="bottom" id="Km7-Xj-FVZ"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BUO-Jn-w5u" secondAttribute="bottom" constant="22" id="afs-VT-pdP"/>
+                    <constraint firstItem="DLp-cp-HCl" firstAttribute="top" secondItem="WwF-On-P0W" secondAttribute="top" id="j5x-gP-Py4"/>
+                    <constraint firstAttribute="trailing" secondItem="DLp-cp-HCl" secondAttribute="trailing" constant="20" id="kRM-H4-3H9"/>
+                    <constraint firstItem="BUO-Jn-w5u" firstAttribute="leading" secondItem="DLp-cp-HCl" secondAttribute="leading" constant="1" id="oEz-nC-ThG"/>
+                    <constraint firstItem="WwF-On-P0W" firstAttribute="centerY" secondItem="CeZ-KT-hUu" secondAttribute="centerY" id="uCR-bR-Nrr"/>
+                    <constraint firstItem="WwF-On-P0W" firstAttribute="height" secondItem="CeZ-KT-hUu" secondAttribute="height" multiplier="1/1.45" id="wsp-2f-5hK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="eiX-2K-l9j"/>
+            <connections>
+                <outlet property="imageViewSubCat" destination="WwF-On-P0W" id="IEe-Tx-Rwc"/>
+                <outlet property="lblDescr" destination="BUO-Jn-w5u" id="9A0-Cj-sLh"/>
+                <outlet property="lblName" destination="DLp-cp-HCl" id="9r2-9N-stN"/>
+            </connections>
+            <point key="canvasLocation" x="-90.5" y="24"/>
+        </tableViewCell>
+    </objects>
+</document>
