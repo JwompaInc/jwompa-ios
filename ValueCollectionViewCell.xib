@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14105" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Black.ttf">
+            <string>Lato-Black</string>
+        </array>
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ValueCollectionCell" id="gTV-IL-0wX" customClass="ValueCollectionViewCell" customModule="JWOMPA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XJ3-8u-LLs">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gradient" translatesAutoresizingMaskIntoConstraints="NO" id="ZJs-Ag-IOd">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQL-rV-uS7">
+                                <rect key="frame" x="20" y="10" width="260" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Lato-Black" family="Lato" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxr-sI-X9c">
+                                <rect key="frame" x="40" y="20" width="220" height="109"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZJs-Ag-IOd" firstAttribute="top" secondItem="XJ3-8u-LLs" secondAttribute="top" id="4o8-By-SLq"/>
+                            <constraint firstAttribute="trailing" secondItem="ZJs-Ag-IOd" secondAttribute="trailing" id="9j8-e4-JV5"/>
+                            <constraint firstItem="OQL-rV-uS7" firstAttribute="leading" secondItem="XJ3-8u-LLs" secondAttribute="leading" constant="20" id="FHc-10-aLn"/>
+                            <constraint firstAttribute="trailing" secondItem="Zxr-sI-X9c" secondAttribute="trailing" constant="40" id="WRW-bE-p56"/>
+                            <constraint firstItem="Zxr-sI-X9c" firstAttribute="top" secondItem="OQL-rV-uS7" secondAttribute="bottom" constant="10" id="f03-d5-fqZ"/>
+                            <constraint firstItem="OQL-rV-uS7" firstAttribute="top" secondItem="XJ3-8u-LLs" secondAttribute="top" constant="10" id="gbl-w6-E1U"/>
+                            <constraint firstAttribute="bottom" secondItem="ZJs-Ag-IOd" secondAttribute="bottom" id="gdx-4o-1x9"/>
+                            <constraint firstItem="Zxr-sI-X9c" firstAttribute="leading" secondItem="XJ3-8u-LLs" secondAttribute="leading" constant="40" id="rQY-7K-4M1"/>
+                            <constraint firstItem="ZJs-Ag-IOd" firstAttribute="leading" secondItem="XJ3-8u-LLs" secondAttribute="leading" id="sCf-4b-8CS"/>
+                            <constraint firstAttribute="trailing" secondItem="OQL-rV-uS7" secondAttribute="trailing" constant="20" id="wFp-xj-Vfw"/>
+                            <constraint firstAttribute="bottom" secondItem="Zxr-sI-X9c" secondAttribute="bottom" constant="40" id="weX-Rm-HtO"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="XJ3-8u-LLs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="1fh-Ac-FUj"/>
+                <constraint firstItem="XJ3-8u-LLs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="NJ8-Dq-Ik6"/>
+                <constraint firstAttribute="trailing" secondItem="XJ3-8u-LLs" secondAttribute="trailing" id="cDa-eh-CuJ"/>
+                <constraint firstAttribute="bottom" secondItem="XJ3-8u-LLs" secondAttribute="bottom" id="ua1-4i-OnB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="300" height="169"/>
+            <connections>
+                <outlet property="contentLabel" destination="Zxr-sI-X9c" id="yA5-9U-Zeu"/>
+                <outlet property="titleLabel" destination="OQL-rV-uS7" id="zGK-GB-sG9"/>
+            </connections>
+            <point key="canvasLocation" x="169" y="113.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Gradient" width="320" height="143"/>
+    </resources>
+</document>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpeningPreferencesViewController2" customModule="JWOMPA" customModuleProvider="target">
+            <connections>
+                <outlet property="finishButton" destination="cwr-1t-9mF" id="ybI-zD-oZ1"/>
+                <outlet property="noPreferenceButton" destination="g3T-cd-Y2j" id="4Lx-nE-ajP"/>
+                <outlet property="tableView" destination="a4A-rs-mWk" id="DGQ-gQ-YkI"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What kind of music do you like most?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ght-Kt-yys">
+                    <rect key="frame" x="12.5" y="98" width="295.5" height="22"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Select top 3 - max)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEj-SU-d0c">
+                    <rect key="frame" x="12.5" y="124" width="295.5" height="22"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="a4A-rs-mWk">
+                    <rect key="frame" x="10" y="164" width="300" height="318"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="UV0-LU-daJ"/>
+                        <outlet property="delegate" destination="-1" id="2cj-WG-4mK"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwr-1t-9mF">
+                    <rect key="frame" x="96" y="512" width="128" height="38"/>
+                    <color key="backgroundColor" red="0.34901960784313724" green="0.59999999999999998" blue="0.5725490196078431" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                    <state key="normal" title="Finish">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="finishButtonTouched:" destination="-1" eventType="touchUpInside" id="bcp-pE-rK7"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g3T-cd-Y2j" userLabel="No Preference">
+                    <rect key="frame" x="121.5" y="487" width="77" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="sal-P3-gMZ"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="No Preference">
+                                <attributes>
+                                    <color key="NSColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <font key="NSFont" size="12" name="ArialNarrow"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    <integer key="NSUnderline" value="1"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="noPreferenceButtonTouched:" destination="-1" eventType="touchUpInside" id="mAy-x4-UF1"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="a4A-rs-mWk" firstAttribute="top" secondItem="hEj-SU-d0c" secondAttribute="bottom" constant="18" id="0yd-qb-Smj"/>
+                <constraint firstItem="g3T-cd-Y2j" firstAttribute="top" secondItem="a4A-rs-mWk" secondAttribute="bottom" constant="5" id="2l5-3w-6is"/>
+                <constraint firstItem="a4A-rs-mWk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="8CV-Bo-1kf"/>
+                <constraint firstItem="Ght-Kt-yys" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="78" id="DGj-zq-ZfM"/>
+                <constraint firstItem="hEj-SU-d0c" firstAttribute="top" secondItem="Ght-Kt-yys" secondAttribute="bottom" constant="4" id="VF8-aq-1fQ"/>
+                <constraint firstItem="cwr-1t-9mF" firstAttribute="top" secondItem="g3T-cd-Y2j" secondAttribute="bottom" constant="5" id="W0P-k7-ZLt"/>
+                <constraint firstItem="hEj-SU-d0c" firstAttribute="width" secondItem="Ght-Kt-yys" secondAttribute="width" id="bQH-4K-uaB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="cwr-1t-9mF" secondAttribute="bottom" constant="18" id="dOT-iN-Gge"/>
+                <constraint firstItem="cwr-1t-9mF" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="1/2.5" id="g0c-ef-vP7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="a4A-rs-mWk" secondAttribute="trailing" constant="10" id="goP-pZ-3Ho"/>
+                <constraint firstItem="hEj-SU-d0c" firstAttribute="centerX" secondItem="Ght-Kt-yys" secondAttribute="centerX" id="hPA-MF-xYm"/>
+                <constraint firstItem="Ght-Kt-yys" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kbm-13-I0y"/>
+                <constraint firstItem="cwr-1t-9mF" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1/15" id="meP-IV-guw"/>
+                <constraint firstItem="cwr-1t-9mF" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="pgl-jA-GJQ"/>
+                <constraint firstItem="hEj-SU-d0c" firstAttribute="height" secondItem="Ght-Kt-yys" secondAttribute="height" id="uco-06-AAR"/>
+                <constraint firstItem="g3T-cd-Y2j" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wEM-sq-w0E"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

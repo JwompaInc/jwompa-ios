@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
+        <array key="Lato-Regular.ttf">
+            <string>Lato-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpeningPreferencesViewController1" customModule="JWOMPA" customModuleProvider="target">
+            <connections>
+                <outlet property="nextButton" destination="Qfd-Mg-SeX" id="LQ6-EE-OVA"/>
+                <outlet property="tableView" destination="aUR-f1-KhM" id="wPE-F0-8r4"/>
+                <outlet property="view" destination="b6E-CJ-Jq9" id="KSU-xM-jR8"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="b6E-CJ-Jq9">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tell us about yourself" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmA-8h-RUc">
+                    <rect key="frame" x="92.5" y="98" width="190.5" height="22"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Select all that applies to you)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yf-oX-niv">
+                    <rect key="frame" x="92.5" y="124" width="190.5" height="22"/>
+                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aUR-f1-KhM">
+                    <rect key="frame" x="0.0" y="164" width="375" height="422.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="0WH-nl-KS6"/>
+                        <outlet property="delegate" destination="-1" id="XtK-Dz-WxI"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qfd-Mg-SeX">
+                    <rect key="frame" x="112.5" y="604.5" width="150" height="44.5"/>
+                    <color key="backgroundColor" red="0.34901960780000002" green="0.59999999999999998" blue="0.57254901960000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="16"/>
+                    <state key="normal" title="Next">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextButtonTouched:" destination="-1" eventType="touchUpInside" id="96J-36-Jyj"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="cmA-8h-RUc" firstAttribute="top" secondItem="ykm-te-dts" secondAttribute="top" constant="78" id="8F0-uY-ZxP"/>
+                <constraint firstItem="ykm-te-dts" firstAttribute="trailing" secondItem="aUR-f1-KhM" secondAttribute="trailing" id="Auv-A7-tVW"/>
+                <constraint firstItem="Qfd-Mg-SeX" firstAttribute="width" secondItem="b6E-CJ-Jq9" secondAttribute="width" multiplier="1/2.5" id="CQr-rs-gIC"/>
+                <constraint firstItem="Qfd-Mg-SeX" firstAttribute="top" secondItem="aUR-f1-KhM" secondAttribute="bottom" constant="18" id="Ezk-r2-UeD"/>
+                <constraint firstItem="aUR-f1-KhM" firstAttribute="top" secondItem="0yf-oX-niv" secondAttribute="bottom" constant="18" id="HR7-a9-r0q"/>
+                <constraint firstItem="0yf-oX-niv" firstAttribute="top" secondItem="cmA-8h-RUc" secondAttribute="bottom" constant="4" id="HvO-Rh-v6H"/>
+                <constraint firstItem="0yf-oX-niv" firstAttribute="centerX" secondItem="cmA-8h-RUc" secondAttribute="centerX" id="Kko-9C-Jj6"/>
+                <constraint firstItem="Qfd-Mg-SeX" firstAttribute="centerX" secondItem="ykm-te-dts" secondAttribute="centerX" id="Stb-d1-B3t"/>
+                <constraint firstItem="cmA-8h-RUc" firstAttribute="centerX" secondItem="b6E-CJ-Jq9" secondAttribute="centerX" id="bdT-EC-Jr9"/>
+                <constraint firstItem="ykm-te-dts" firstAttribute="bottom" secondItem="Qfd-Mg-SeX" secondAttribute="bottom" constant="18" id="eG6-yd-3kQ"/>
+                <constraint firstItem="0yf-oX-niv" firstAttribute="height" secondItem="cmA-8h-RUc" secondAttribute="height" id="gf9-iC-g8R"/>
+                <constraint firstItem="aUR-f1-KhM" firstAttribute="leading" secondItem="ykm-te-dts" secondAttribute="leading" id="ial-K8-afL"/>
+                <constraint firstItem="0yf-oX-niv" firstAttribute="width" secondItem="cmA-8h-RUc" secondAttribute="width" id="wy4-bZ-0tv"/>
+                <constraint firstItem="Qfd-Mg-SeX" firstAttribute="height" secondItem="b6E-CJ-Jq9" secondAttribute="height" multiplier="1/15" id="z1i-i8-8Tv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ykm-te-dts"/>
+        </view>
+    </objects>
+</document>

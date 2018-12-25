@@ -1,1 +1,1 @@
-# jwompa-ios
+# jwompa-ios-app
